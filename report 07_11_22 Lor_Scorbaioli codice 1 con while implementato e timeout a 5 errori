@@ -1,11 +1,14 @@
  GNU nano 6.3                                                                                                    esercizio1.py                                                                                                             
 import math
 
-x= input ("Benvenuto, cosa vuoi fare?\nA) Calcolare il perimetro di un quadrato\nB) Calcolare la circonferenza di un cerchio\nC) Calcolare il perimetro di un rettangolo\n")
-
+x = input ("Benvenuto, cosa vuoi fare?\nA) Calcolare il perimetro di un quadrato\nB) Calcolare la circonferenza di un cerchio\nC) Calcolare il perimetro di un rettangolo\n")
+c = 0
 while (x != 'A' and x != 'B' and x != 'C'):
         print ("input non valido\n")
         x= input ("Benvenuto, cosa vuoi fare?\nA) Calcolare il perimetro di un quadrato\nB) Calcolare la circonferenza di un cerchio\nC) cslolare il perimetro di un rettangolo\n")
+        c = c+1
+        if ( c >= 5):
+               break
 
 if ( x == 'A'):
                 lq= float(input ("Quanto è lungo il lato del quadrato?\n"))
