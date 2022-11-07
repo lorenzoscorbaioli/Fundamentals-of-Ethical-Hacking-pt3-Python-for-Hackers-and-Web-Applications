@@ -1,0 +1,37 @@
+                                                                modulobase.py *                                                                                                           
+#modulo base che fa partire il programma per calcolare i perimetri delle figure geometriche
+
+from perimetri import * #tramite questa linea di codice andiamo a prendere le funzioni contenute nel file perimetri.py per essere in grado di poterle usare anche se non sono scritte direttamente in questo codice
+
+x= input ("Benvenuto, cosa vuoi fare?\nA) Calcolare il perimetro di un quadrato\nB) Calcolare la circonferenza di un cerchio\nC) Calcolare il perimetro di un rettangolo\n")
+
+if ( x == 'A'):
+        quadrato()
+
+elif ( x == 'B'):
+        cerchio()
+
+elif ( x == 'C'):
+        rettangolo()
+
+else:
+        print ("Alla prossima")
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+                                                                perimetri.py                                                                                                              
+#il file .py separato dal quale il file modulobase.py va ad attingere per prendere le funzioni
+
+def quadrato():
+        lq= int(input('Inserisci il valore dal lato: '))
+        print ('Perimetro: ',lq*4)
+def cerchio():
+        raggio=float(input("inserisci il valore del raggio:"))
+        print ("circonferenza: " ,2*3.14*raggio)
+def rettangolo():
+        base=int(input('Inserisci il valore della base '))
+        altezza=int(input("Inserisci il valore dell'altezza "))
+        print ('Perimetro: ', base*2+altezza*2)
+
+
+
+
