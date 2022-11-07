@@ -1,0 +1,21 @@
+import math
+
+x= input ("Benvenuto, cosa vuoi fare?\nA) Calcolare il perimetro di un quadrato\nB) Calcolare la circonferenza di un cerchio\nC) Calcolare il perimetro di un rettangolo\n")
+
+if ( x == 'A'):
+        lq= float(input ("Quanto è lungo il lato del quadrato?\n"))
+        print ("Il perimetro di un quadrato di lato" ,lq, "e' \n", lq*4)
+
+elif ( x == 'B'):
+        r= float(input("Quant'e' il raggio del cerchio?\n"))
+        print ("la circonferenza di un cerchio di raggio" ,r, " e':\n", 2*math.pi*r)
+
+elif ( x == 'C'):
+        lb= float(input("Qual'e' il valore della base?\n"))
+        la= float(input("E l'altezza invece?\n"))
+        pr= (lb+la)*2
+        print ("Il perimetro di un rettangolo con base" ,lb, " e altezza " ,la, " e' pari a: \n" ,lb*2+la*2)
+
+else:
+        print ("Alla prossima\n")
+
