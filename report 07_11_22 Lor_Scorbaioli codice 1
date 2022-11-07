@@ -1,6 +1,6 @@
 import math
 
-x= input ("Benvenuto, cosa vuoi fare?\nA) Calcolare il perimetro di un quadrato\nB) Calcolare la circonferenza di un cerchio\nC) Calcolare il perimetro di un rettangolo\n")
+x= input ("Benvenuto, cosa vuoi fare?\nA) Calcolare il perimetro di un quadrato\nB) Calcolare la circonferenza di un cerchio\nC) Calcolare il perimetro di un rettangolo\nPremi qualsiasi altro tasto per uscire\n")
 
 if ( x == 'A'):
         lq= float(input ("Quanto è lungo il lato del quadrato?\n"))
