@@ -1,21 +1,21 @@
 import socket
-import random  #libreria per la funzione random che utilizzeremo per la>
+import random  #libreria per la funzione random che utilizzeremo per la dimensione dei pacchetti che invieremo
 
 ip = input ("Inserisci l'indirizzo IP\n")
 port = int (input ("Inserisci la porta\n"))
 
-p = int (input ("Inserire quanti pacchetti inviare\n")) #numero di pacc>
+p = int (input ("Inserire quanti pacchetti inviare\n")) #numero di pacchetti che l'utilizzatore vuole inviare
 
 if (p >0):
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) #socket.SOCK_DGRAM per il socket per connessioni UDP
         s.bind((ip, port))
 
-        data = random.randbytes(1024) #definizione sella grandezza dei >
-        target = (str(ip), int(port)) #indicazione dell'obiettivo a cui>
+        data = random.randbytes(1024) #definizione della grandezza dei pacchetti 
+        target = (str(ip), int(port)) #indicazione dell'obiettivo a cui inviare i pacchetti
 
-        for x in range(p): #funzione for che serve  a inviare il numero>
+        for x in range(p): #ciclo for che serve a far continuare l'invio di pacchetti finchè il numero di pacchetti non raggiunge il valore p messo in input
                 s.sendto(data, target)
-
-
+        sclose()
+        quit()
 
 
