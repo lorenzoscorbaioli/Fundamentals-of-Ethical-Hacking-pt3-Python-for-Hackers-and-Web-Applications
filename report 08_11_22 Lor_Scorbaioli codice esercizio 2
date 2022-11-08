@@ -1,0 +1,21 @@
+import socket
+import random  #libreria per la funzione random che utilizzeremo per la>
+
+ip = input ("Inserisci l'indirizzo IP\n")
+port = int (input ("Inserisci la porta\n"))
+
+p = int (input ("Inserire quanti pacchetti inviare\n")) #numero di pacc>
+
+if (p >0):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.bind((ip, port))
+
+        data = random.randbytes(1024) #definizione sella grandezza dei >
+        target = (str(ip), int(port)) #indicazione dell'obiettivo a cui>
+
+        for x in range(p): #funzione for che serve  a inviare il numero>
+                s.sendto(data, target)
+
+
+
+
