@@ -15,6 +15,6 @@ if (p >0):
 
         for x in range(p): #ciclo for che serve a far continuare l'invio di pacchetti finchè il numero di pacchetti non raggiunge il valore p messo in input
                 s.sendto(data, target)
-        s.close()
+  
         
 
